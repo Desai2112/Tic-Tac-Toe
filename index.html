@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Tac Toe</title>
-    <link rel="StyleSheet" href="index.css">
-
+    <link rel="StyleSheet" href="style.css">
 </head>
 <body>
     <nav>
@@ -14,29 +13,30 @@
         </ul>
     </nav>
 
-    <div id="container">
-        <label for="player1">Player 1 Name:</label>
-        <input type="text" id="player1" placeholder="Enter name" required>
-
-        <label for="player2">Player 2 Name:</label>
-        <input type="text" id="player2" placeholder="Enter name" required>
-
-        <br>
-
-        <button id="startButton" onclick="startGame()">Start Game</a></button>
+    <div class="gameContainer">
+        <div class="container">
+            <div class="line"></div>
+            <div class="box bt-0 bl-0"><span class="boxText"></span></div>
+            <div class="box bt-0"><span class="boxText"></span></div>
+            <div class="box bt-0 br-0"><span class="boxText"></span></div>
+            <div class="box bl-0"><span class="boxText"></span></div>
+            <div class="box"><span class="boxText"></span></div>
+            <div class="box br-0"><span class="boxText"></span></div>
+            <div class="box bb-0 bl-0"><span class="boxText"></span></div>
+            <div class="box bb-0"><span class="boxText"></span></div>
+            <div class="box bb-0 br-0"><span class="boxText"></span></div>
+        </div>
+        <div class="gameInfo">
+            <h1>Welcome to Game</h1>
+            <div>
+                <span class="info">Turn for X</span>
+                <button id="reset" onclick="">Reset</button>
+            </div>
+            <div class="imagebox">
+                <img src="winner.gif" alt="">
+            </div>
+        </div>
     </div>
-    <script>
-        function startGame() {
-            let player1Name = document.getElementById('player1').value;
-            let player2Name = document.getElementById('player2').value;
-        
-            if (player1Name.trim() === '' || player2Name.trim() === '') {
-                alert('Please enter names for both players.');
-            } else {
-                // Redirect to the Tic Tac Toe game page only if both player names are entered
-                window.location.href = 'mainGame.html';
-            }
-        }
-    </script>
+    <script src="game.js"></script>
 </body>
 </html>
