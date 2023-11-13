@@ -93,7 +93,7 @@ nav {
 .line{
     background-color: black;
     width: 0;
-    height: 3px;
+    height: 4px;
     position: absolute;
     transition: width 1s ease-in-out;
     background-color: rgb(52, 52, 161);
